@@ -1,0 +1,17 @@
+body {
+    background-color: aquamarine;
+}
+
+.deleteImage {
+    float: left;
+    width: 3rem;
+}
+
+.editItem {
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+}
+
+.editItemHolder {
+    margin-bottom: 1rem;
+}

@@ -4,6 +4,8 @@ var localData
 var listName
 var listEntry
 
+
+
 $(window).on("load", generateListEntries)
 
 function AddNewEntry() {
@@ -25,7 +27,7 @@ function AddNewEntry() {
 }
 
 function ChooseRandomFromList() {
-    let listName = document.getElementById("listHolder").value
+    let listName = document.getElementById("randomList").value
     lists = getFromLocalStorage()
     if(lists == undefined || lists[listName] == undefined){
         document.getElementById("showRandom").innerHTML = "No list found"
@@ -51,14 +53,31 @@ function getFromLocalStorage(){
 
 function generateListEntries(){
     let currentList = getFromLocalStorage()
-    let listSelecter = document.getElementById("listHolder")
+    let listSelecter = document.getElementsByClassName("listHolder")
     let option = document.createElement("option")
     if(currentList){
         for(var key in currentList){
-            option.text = key
-            listSelecter.appendChild(option)
-            option = document.createElement("option")
+            for(var j=0; j<listSelecter.length; j++){
+                option.text = key
+                listSelecter[j].appendChild(option)
+                option = document.createElement("option")
+            }
         }
+    }
+}
+
+function showListEntries() {
+    let list = document.getElementById("editList").value
+    let editList = document.getElementById("listEditContent")
+    lists = getFromLocalStorage()
+    document.getElementById("listEditContent").innerHTML = ""
+    for(var i=0; i<lists[list].length; i++){
+        let div = document.createElement("div")
+        div.className = "editItemHolder"
+        div.innerHTML = 
+        "<img class='deleteImage' src='images/DeleteRound_icon.svg'/> <input class='editItem' type='text' placeholder='"
+        + lists[list][i] + "'/>"
+        editList.appendChild(div)
     }
 }
 
