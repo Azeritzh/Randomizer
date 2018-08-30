@@ -34,13 +34,15 @@
 
 <div id="mainContainer">
     <div id="mainElement">
+        <div class="InputHeader">Choose existing list or write new:</div>
         <input type="text" id="mainInputField">
         <div id="mainSelect" onclick="showDropdown()">
             <img id="mainArrow" src="images/ArrowDown_icon.svg">
         </div>
-        <button id="mainSubmit" onclick="AddNewEntry()">Submit</button>
         <div id="dropdownOptions"></div>
+        <div class="InputHeader" style="margin-top: 2rem;">Add new entry to existing list:</div>
         <input type="text" id="newEntry">
+        <button id="mainSubmit" onclick="AddNewEntry()">Submit</button>
     </div>
         
     <div id="listEditContent"></div>

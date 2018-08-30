@@ -20,12 +20,11 @@ body {
 }
 
 #mainInputField {
-    width: 26rem;
+    width: 26.5rem;
     height: 3rem;
     font-size: 2rem;
     float:left;
     border: none;
-    border-top-left-radius: 1rem;
     padding-left: 1rem;
 }
 
@@ -43,13 +42,14 @@ h1 {
 }
 
 #mainSubmit {
-    width: 9rem;
+    width: 30rem;
     height: 3rem;
     font-size: 2rem;
     background-color: burlywood;
     border: none;
-    border-bottom-right-radius: 1rem;
-    border-top-right-radius: 1rem;
+    border-radius: 1rem;
+    position: absolute;
+    margin-top: 5rem;
 }
 
 #mainSelect {
@@ -69,10 +69,11 @@ h1 {
 #dropdownOptions {
     background-color: white;
     border-top: 1px solid darkgray;
-    width: 29.5rem;
+    width: 30rem;
     position: absolute;
     display: none;
     z-index: 1;
+    margin-top: 3rem;
 }
 
 .listOption {
@@ -100,10 +101,13 @@ h1 {
 
 #newEntry {
     position: absolute;
-    width: 29.5rem;
+    width: 30rem;
     height: 3rem;
     border: none;
-    margin-top: 2rem;
     font-size: 2rem;
     padding-left: 1rem;
+}
+
+.InputHeader {
+    font-size: 2rem;
 }

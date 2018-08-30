@@ -25,6 +25,8 @@ function AddNewEntry() {
     }
     AddToLocalStorage()
     generateListEntries()
+    showDropdown()
+    showListEntries(listName)
     console.log(getFromLocalStorage())
 }
 
