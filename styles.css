@@ -1,5 +1,5 @@
 body {
-    background-color: aquamarine;
+    background-color: #3c6148;
 }
 
 .deleteImage {
@@ -14,4 +14,66 @@ body {
 
 .editItemHolder {
     margin-bottom: 1rem;
+}
+
+#mainInputField {
+    width: 26rem;
+    height: 3rem;
+    font-size: 2rem;
+    float:left;
+    border: none;
+}
+
+h1 {
+    text-align: center;
+    display: block;
+    margin-top: 3rem;
+    font-size: 4rem;
+}
+
+#mainElement {
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mainSubmit {
+    width: 9rem;
+    height: 3rem;
+    font-size: 2rem;
+    background-color: burlywood;
+    border: none;
+}
+
+#mainSelect {
+    width: 3.5rem;
+    height: 3rem;
+    border: none;
+    float: left;
+    font-size: 1.5rem;
+    background-color: white;
+}
+
+#mainArrow {
+    width: 3rem;
+    cursor: pointer;
+}
+
+#dropdownOptions {
+    background-color: white;
+    border-top: 1px solid darkgray;
+    width: 29.5rem;
+    display: none;
+}
+
+.listOption {
+    font-size: 2rem;
+    font-family: sans-serif;
+    padding-left: 0.5rem;
+    cursor: pointer;
+}
+
+.listOption:hover {
+    background-color: #4da76a;
 }

@@ -17,6 +17,8 @@
     <div>Generate random from existing list:</div>
     <select class="listHolder" id="randomList">
         <option>Generate from ...</option>
+        <option>Generate from ...</option>
+        <option>Generate from ...</option>
     </select>
     <button onclick="ChooseRandomFromList()">Generate random</button>
 </div>
@@ -29,5 +31,15 @@
     </select>
     <button onclick="showListEntries()">Edit list</button>
 </div>
+
+<div id="mainElement">
+    <input type="text" id="mainInputField">
+    <div id="mainSelect" onclick="showDropdown()">
+        <img id="mainArrow" src="images/ArrowDown_icon.svg">
+    </div>
+    <button id="mainSubmit">Submit</button>
+    <div id="dropdownOptions"></div>
+</div>
+
 
 <div id="listEditContent"></div>

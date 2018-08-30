@@ -51,7 +51,7 @@ function getFromLocalStorage(){
     }
 }
 
-function generateListEntries(){
+/*function generateListEntries(){
     let currentList = getFromLocalStorage()
     let listSelecter = document.getElementsByClassName("listHolder")
     let option = document.createElement("option")
@@ -62,6 +62,21 @@ function generateListEntries(){
                 listSelecter[j].appendChild(option)
                 option = document.createElement("option")
             }
+        }
+    }
+}*/
+
+
+function generateListEntries(){
+    let currentList = getFromLocalStorage()
+    let listSelecter = document.getElementById("dropdownOptions")
+    let option = document.createElement("div")
+    if(currentList){
+        for(var key in currentList){
+            option.className = "listOption"
+            option.innerHTML = key
+            listSelecter.appendChild(option)
+            option = document.createElement("div")
         }
     }
 }
@@ -79,5 +94,16 @@ function showListEntries() {
         + lists[list][i] + "'/>"
         editList.appendChild(div)
     }
+}
+
+function showDropdown() {
+    let dropdownElement = document.getElementById("dropdownOptions")
+    if(dropdownElement.style.display == "none" || dropdownElement.style.display == ""){
+        dropdownElement.style.display = "block"
+    } 
+    else {
+        dropdownElement.style.display = "none"
+    }
+    
 }
 
