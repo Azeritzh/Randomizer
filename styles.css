@@ -4,12 +4,15 @@ body {
 
 .deleteImage {
     float: left;
-    width: 3rem;
+    width: 5rem;
 }
 
 .editItem {
     margin-left: 0.5rem;
     margin-top: 1rem;
+    width: 28rem;
+    height: 3rem;
+    font-size: 2rem;
 }
 
 .editItemHolder {
@@ -22,6 +25,8 @@ body {
     font-size: 2rem;
     float:left;
     border: none;
+    border-top-left-radius: 1rem;
+    padding-left: 1rem;
 }
 
 h1 {
@@ -34,8 +39,7 @@ h1 {
 #mainElement {
     width: fit-content;
     height: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+    float: left;
 }
 
 #mainSubmit {
@@ -44,6 +48,8 @@ h1 {
     font-size: 2rem;
     background-color: burlywood;
     border: none;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
 #mainSelect {
@@ -64,6 +70,7 @@ h1 {
     background-color: white;
     border-top: 1px solid darkgray;
     width: 29.5rem;
+    position: absolute;
     display: none;
 }
 
@@ -76,4 +83,26 @@ h1 {
 
 .listOption:hover {
     background-color: #4da76a;
+}
+
+#listEditContent {
+    display: block;
+    margin-left: 2rem;
+}
+
+#mainContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    display:flex;
+}
+
+#newEntry {
+    position: absolute;
+    width: 29.5rem;
+    height: 3rem;
+    border: none;
+    margin-top: 2rem;
+    font-size: 2rem;
+    padding-left: 1rem;
 }

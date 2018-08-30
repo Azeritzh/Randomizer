@@ -9,21 +9,22 @@ var listEntry
 $(window).on("load", generateListEntries)
 
 function AddNewEntry() {
-    if(getFromLocalStorage() != undefined){
-        lists = getFromLocalStorage()
-    }
-    listName = document.getElementById("newList").value
+    lists = getFromLocalStorage()
+    listName = document.getElementById("mainInputField").value
     listEntry = document.getElementById("newEntry").value
-    
-        if(lists[listName] != undefined){
-            lists[listName].push(listEntry)
+    if(lists != undefined){
+        if(lists[listName] != undefined) {
+            if(listEntry != ""){
+                lists[listName].push(listEntry)
+            }
         }
-        else {
-            lists[listName] = [listEntry]
+        else{
+            lists[listName] = []
         }
-    document.getElementById("newEntry").value = ""
-
+    }
     AddToLocalStorage()
+    generateListEntries()
+    console.log(getFromLocalStorage())
 }
 
 function ChooseRandomFromList() {
@@ -45,55 +46,44 @@ function AddToLocalStorage(){
 
 function getFromLocalStorage(){
     let item = localStorage.getItem("RandomizerLists")
-    if(item){
+    if(item && item != "undefined"){
         localData = JSON.parse(item)
         return localData
     }
+    return {}
 }
-
-/*function generateListEntries(){
-    let currentList = getFromLocalStorage()
-    let listSelecter = document.getElementsByClassName("listHolder")
-    let option = document.createElement("option")
-    if(currentList){
-        for(var key in currentList){
-            for(var j=0; j<listSelecter.length; j++){
-                option.text = key
-                listSelecter[j].appendChild(option)
-                option = document.createElement("option")
-            }
-        }
-    }
-}*/
-
 
 function generateListEntries(){
     let currentList = getFromLocalStorage()
     let listSelecter = document.getElementById("dropdownOptions")
-    let option = document.createElement("div")
+    listSelecter.innerHTML = ""
     if(currentList){
-        for(var key in currentList){
+        for(let key in currentList){
+            let option = document.createElement("div")
             option.className = "listOption"
             option.innerHTML = key
+            option.onclick = ()=>{
+                document.getElementById("mainInputField").value = key
+                showListEntries(key)
+            }
             listSelecter.appendChild(option)
-            option = document.createElement("div")
         }
     }
 }
 
-function showListEntries() {
-    let list = document.getElementById("editList").value
+function showListEntries(key) {
     let editList = document.getElementById("listEditContent")
     lists = getFromLocalStorage()
     document.getElementById("listEditContent").innerHTML = ""
-    for(var i=0; i<lists[list].length; i++){
+    for(var i=0; i<lists[key].length; i++){
         let div = document.createElement("div")
         div.className = "editItemHolder"
         div.innerHTML = 
         "<img class='deleteImage' src='images/DeleteRound_icon.svg'/> <input class='editItem' type='text' placeholder='"
-        + lists[list][i] + "'/>"
+        + lists[key][i] + "'/>"
         editList.appendChild(div)
     }
+    showDropdown()
 }
 
 function showDropdown() {
@@ -104,6 +94,5 @@ function showDropdown() {
     else {
         dropdownElement.style.display = "none"
     }
-    
 }
 

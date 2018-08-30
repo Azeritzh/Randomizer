@@ -5,7 +5,7 @@
 
 <h1>List Element Randomizer</h1>
 
-<div>
+<!--div>
     <div>New list name:</div>
     <input type="text" id="newList">
     <div>New entry to list:</div>
@@ -30,16 +30,19 @@
         <option>Choose list to edit ...</option>
     </select>
     <button onclick="showListEntries()">Edit list</button>
-</div>
+</div-->
 
-<div id="mainElement">
-    <input type="text" id="mainInputField">
-    <div id="mainSelect" onclick="showDropdown()">
-        <img id="mainArrow" src="images/ArrowDown_icon.svg">
+<div id="mainContainer">
+    <div id="mainElement">
+        <input type="text" id="mainInputField">
+        <div id="mainSelect" onclick="showDropdown()">
+            <img id="mainArrow" src="images/ArrowDown_icon.svg">
+        </div>
+        <button id="mainSubmit" onclick="AddNewEntry()">Submit</button>
+        <div id="dropdownOptions"></div>
+        <input type="text" id="newEntry">
     </div>
-    <button id="mainSubmit">Submit</button>
-    <div id="dropdownOptions"></div>
+        
+    <div id="listEditContent"></div>
 </div>
 
-
-<div id="listEditContent"></div>
