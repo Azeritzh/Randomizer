@@ -4,6 +4,8 @@ var localData
 var listName
 var listEntry
 
+window.onload = generateListEntries()
+
 function AddNewEntry() {
     if(getFromLocalStorage() != undefined){
         lists = getFromLocalStorage()
@@ -25,9 +27,14 @@ function AddNewEntry() {
 
 function ChooseRandomFromList() {
     var listName = document.getElementById("generatelist").value
-    var listLength = lists[listName].length
-    var random = Math.floor(Math.random() * listLength)
-    document.getElementById("showRandom").innerHTML = lists[listName][random]
+    lists = getFromLocalStorage()
+    if(lists == undefined || lists[listName] == undefined){
+        document.getElementById("showRandom").innerHTML = "No list found"
+    } else{
+        var listLength = lists[listName].length
+        var random = Math.floor(Math.random() * listLength)
+        document.getElementById("showRandom").innerHTML = lists[listName][random]
+    } 
 }
 
 function AddToLocalStorage(){
@@ -41,6 +48,18 @@ function getFromLocalStorage(){
         localData = JSON.parse(item)
         return localData
     }
-    
+}
+
+function generateListEntries(){
+    let currentList = getFromLocalStorage()
+    let listSelecter = document.getElementById("listHolder")
+    let option = document.createElement("option")
+    if(currentList){
+        for(var key in currentList){
+            option.text = key
+            listSelecter.appendChild(option)
+            option = document.createElement("option")
+        }
+    }
 }
 
