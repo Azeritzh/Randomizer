@@ -14,9 +14,10 @@ function AddNewEntry() {
     listEntry = document.getElementById("newEntry").value
     if(lists != undefined){
         if(lists[listName] != undefined) {
-            if(listEntry != ""){
-                lists[listName].push(listEntry)
-            }
+            lists[listName].push(listEntry)
+        }
+        else if(listEntry != "") {
+            lists[listName] = [listEntry]
         }
         else{
             lists[listName] = []
