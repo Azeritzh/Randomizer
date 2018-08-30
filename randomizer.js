@@ -28,7 +28,6 @@ function AddNewEntry() {
     showListEntries(listName)
     document.getElementById("newEntry").value = ""
     document.getElementById("dropdownOptions").style.display = "none"
-    console.log(getFromLocalStorage())
 }
 
 function ChooseRandomFromList() {

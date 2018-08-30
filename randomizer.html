@@ -3,6 +3,7 @@
 
 <link href="styles.css" rel="stylesheet">
 
+<img id="logoImg" src="images/SettingsRound_icon.svg">
 <h1>List Element Randomizer</h1>
 
 <!--div>
@@ -39,11 +40,11 @@
         <div id="mainSelect" onclick="showDropdown()">
             <img id="mainArrow" src="images/ArrowDown_icon.svg">
         </div>
-        <button id="deleteListButton" onclick="deleteList()">Delete list</button>
         <div id="dropdownOptions"></div>
         <div class="InputHeader" style="margin-top: 2rem;">Add new entry to existing list:</div>
         <input type="text" id="newEntry">
         <button id="mainSubmit" onclick="AddNewEntry()">Submit</button>
+        <button id="deleteListButton" onclick="deleteList()">Delete list</button>
     </div>
         
     <div id="listEditContent"></div>

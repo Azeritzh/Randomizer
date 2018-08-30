@@ -1,5 +1,6 @@
 body {
-    background-color: #3c6148;
+    background-color: #a9bbaf;
+    margin: unset;
 }
 
 .deleteImage {
@@ -29,10 +30,18 @@ body {
 }
 
 h1 {
-    text-align: center;
     display: block;
-    margin-top: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 7rem;
     font-size: 4rem;
+    background-color: #3c6148;
+    color: white;
+}
+
+#logoImg {
+    position: absolute;
+    width: 6.5rem;
 }
 
 #mainElement {
@@ -42,10 +51,10 @@ h1 {
 }
 
 #mainSubmit {
-    width: 30rem;
+    width: 14rem;
     height: 3rem;
     font-size: 2rem;
-    background-color: burlywood;
+    background-color: #57966c;
     border: none;
     border-radius: 1rem;
     position: absolute;
@@ -74,6 +83,7 @@ h1 {
     display: none;
     z-index: 1;
     margin-top: 3rem;
+    border-bottom: 1px solid darkgray;
 }
 
 .listOption {
@@ -90,7 +100,7 @@ h1 {
 #listEditContent {
     display: block;
     margin-left: 2rem;
-    margin-top: 7rem;
+    margin-top: 2rem;
 }
 
 #mainContainer {
@@ -114,12 +124,13 @@ h1 {
 }
 
 #deleteListButton {
-    width: 17rem;
+    width: 14rem;
     height: 3rem;
     border: none;
-    background-color: burlywood;
+    background-color: #57966c;
     position: absolute;
-    margin-left: 2.4rem;
+    margin-left: 16rem;
+    margin-top: 5rem;
     border-radius: 1rem;
     font-size: 2rem;
 }
