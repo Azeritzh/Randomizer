@@ -87,7 +87,7 @@ function showListEntries(key) {
         div.onclick = () => deleteEntryFromList(lists[key][i])
         div.innerHTML = 
         "<img class='deleteImage' src='images/DeleteRound_icon.svg'/>" + 
-        "<input class='editItem' type='text' placeholder='" + lists[key][i] + "'/>"
+        "<div class='editItem' type='text'>" + lists[key][i] + "</div>"
         editList.appendChild(div)
     }
     showDropdown()
