@@ -21,7 +21,6 @@ function AddNewEntry() {
 
     AddToLocalStorage()
     console.log(getFromLocalStorage())
-
 }
 
 function ChooseRandomFromList() {
