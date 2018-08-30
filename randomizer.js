@@ -31,15 +31,18 @@ function AddNewEntry() {
 }
 
 function ChooseRandomFromList() {
-    let listName = document.getElementById("randomList").value
+    let listName = document.getElementById("mainInputField").value
     lists = getFromLocalStorage()
-    if(lists == undefined || lists[listName] == undefined){
-        document.getElementById("showRandom").innerHTML = "No list found"
-    } else{
-        var listLength = lists[listName].length
-        var random = Math.floor(Math.random() * listLength)
-        document.getElementById("showRandom").innerHTML = lists[listName][random]
-    } 
+    if(listName == "") {
+        document.getElementById("listEditContent").innerHTML = 
+        "<div class='generatedItem'>No list selected </div>"
+    }
+    else {
+        let listLength = lists[listName].length
+        let random = Math.floor(Math.random() * listLength)
+        document.getElementById("listEditContent").innerHTML = 
+        "<div class='generatedItem'>" + lists[listName][random] + "</div>"
+    }
 }
 
 function AddToLocalStorage(){

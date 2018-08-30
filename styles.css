@@ -100,7 +100,7 @@ h1 {
 #listEditContent {
     display: block;
     margin-left: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 #mainContainer {
@@ -133,4 +133,26 @@ h1 {
     margin-top: 5rem;
     border-radius: 1rem;
     font-size: 2rem;
+}
+
+#generateBotton {
+    position: absolute;
+    background-color: #57966c;
+    border: none;
+    border-radius: 1rem;
+    height: 3rem;
+    width: 30rem;
+    margin-top: 9rem;
+    font-size: 2rem;
+}
+
+.generatedItem {
+    background-color: white;
+    text-align: center;
+    margin-top: 1.3rem;
+    padding-top: 0.4rem;
+    height: 2.6rem;
+    width: 28rem;
+    font-size: 2rem;
+    font-family: sans-serif;
 }

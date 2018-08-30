@@ -6,33 +6,6 @@
 <img id="logoImg" src="images/SettingsRound_icon.svg">
 <h1>List Element Randomizer</h1>
 
-<!--div>
-    <div>New list name:</div>
-    <input type="text" id="newList">
-    <div>New entry to list:</div>
-    <input type="text" id="newEntry">
-    <button onclick="AddNewEntry()">Submit</button>
-</div>
-<br>
-<div>
-    <div>Generate random from existing list:</div>
-    <select class="listHolder" id="randomList">
-        <option>Generate from ...</option>
-        <option>Generate from ...</option>
-        <option>Generate from ...</option>
-    </select>
-    <button onclick="ChooseRandomFromList()">Generate random</button>
-</div>
-<div id="showRandom"></div>
-
-<div>
-    <div>Edit existing list:</div>
-    <select class="listHolder" id="editList">
-        <option>Choose list to edit ...</option>
-    </select>
-    <button onclick="showListEntries()">Edit list</button>
-</div-->
-
 <div id="mainContainer">
     <div id="mainElement">
         <div class="InputHeader">Choose existing list or write new:</div>
@@ -45,6 +18,7 @@
         <input type="text" id="newEntry">
         <button id="mainSubmit" onclick="AddNewEntry()">Submit</button>
         <button id="deleteListButton" onclick="deleteList()">Delete list</button>
+        <button id="generateBotton" onclick="ChooseRandomFromList()">Generate random from list</button>
     </div>
         
     <div id="listEditContent"></div>
