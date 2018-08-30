@@ -1,6 +1,15 @@
+var lists = {}
+var localLists
+var localData
+var listName
+var listEntry
+
 function AddNewEntry() {
-    var listName = document.getElementById("newList").value
-    var listEntry = document.getElementById("newEntry").value
+    if(getFromLocalStorage() != undefined){
+        lists = getFromLocalStorage()
+    }
+    listName = document.getElementById("newList").value
+    listEntry = document.getElementById("newEntry").value
     
         if(lists[listName] != undefined){
             lists[listName].push(listEntry)
@@ -9,6 +18,10 @@ function AddNewEntry() {
             lists[listName] = [listEntry]
         }
     document.getElementById("newEntry").value = ""
+
+    AddToLocalStorage()
+    console.log(getFromLocalStorage())
+
 }
 
 function ChooseRandomFromList() {
@@ -18,11 +31,17 @@ function ChooseRandomFromList() {
     document.getElementById("showRandom").innerHTML = lists[listName][random]
 }
 
-var lists = {
-    Mythical: [
-        "Unicorn",
-        "Dragon",
-        "Fairy",
-        "Griffin"
-    ]
+function AddToLocalStorage(){
+    let item = JSON.stringify(lists)
+    localStorage.setItem("RandomizerLists", item)
 }
+
+function getFromLocalStorage(){
+    let item = localStorage.getItem("RandomizerLists")
+    if(item){
+        localData = JSON.parse(item)
+        return localData
+    }
+    
+}
+
