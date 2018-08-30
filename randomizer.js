@@ -22,11 +22,10 @@ function AddNewEntry() {
     document.getElementById("newEntry").value = ""
 
     AddToLocalStorage()
-    console.log(getFromLocalStorage())
 }
 
 function ChooseRandomFromList() {
-    var listName = document.getElementById("generatelist").value
+    let listName = document.getElementById("listHolder").value
     lists = getFromLocalStorage()
     if(lists == undefined || lists[listName] == undefined){
         document.getElementById("showRandom").innerHTML = "No list found"
