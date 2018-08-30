@@ -90,6 +90,7 @@ h1 {
 #listEditContent {
     display: block;
     margin-left: 2rem;
+    margin-top: 7rem;
 }
 
 #mainContainer {
@@ -109,5 +110,16 @@ h1 {
 }
 
 .InputHeader {
+    font-size: 2rem;
+}
+
+#deleteListButton {
+    width: 17rem;
+    height: 3rem;
+    border: none;
+    background-color: burlywood;
+    position: absolute;
+    margin-left: 2.4rem;
+    border-radius: 1rem;
     font-size: 2rem;
 }

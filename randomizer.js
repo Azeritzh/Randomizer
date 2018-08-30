@@ -25,8 +25,9 @@ function AddNewEntry() {
     }
     AddToLocalStorage()
     generateListEntries()
-    showDropdown()
     showListEntries(listName)
+    document.getElementById("newEntry").value = ""
+    document.getElementById("dropdownOptions").style.display = "none"
     console.log(getFromLocalStorage())
 }
 
@@ -78,12 +79,13 @@ function showListEntries(key) {
     let editList = document.getElementById("listEditContent")
     lists = getFromLocalStorage()
     document.getElementById("listEditContent").innerHTML = ""
-    for(var i=0; i<lists[key].length; i++){
+    for(let i=0; i<lists[key].length; i++){
         let div = document.createElement("div")
         div.className = "editItemHolder"
+        div.onclick = () => deleteEntryFromList(lists[key][i])
         div.innerHTML = 
-        "<img class='deleteImage' src='images/DeleteRound_icon.svg'/> <input class='editItem' type='text' placeholder='"
-        + lists[key][i] + "'/>"
+        "<img class='deleteImage' src='images/DeleteRound_icon.svg'/>" + 
+        "<input class='editItem' type='text' placeholder='" + lists[key][i] + "'/>"
         editList.appendChild(div)
     }
     showDropdown()
@@ -99,3 +101,30 @@ function showDropdown() {
     }
 }
 
+function deleteEntryFromList(item) {
+    lists = getFromLocalStorage()
+    let listName = document.getElementById("mainInputField").value
+    let newItem = []
+    for(var i=0; i<lists[listName].length; i++){
+        if(lists[listName][i] != item){
+            newItem.push(lists[listName][i])
+        }
+    }
+    lists[listName] = newItem
+    AddToLocalStorage()
+    showListEntries(listName)
+    document.getElementById("dropdownOptions").style.display = "none"
+}
+
+function deleteList() {
+    lists = getFromLocalStorage()
+    let listName = document.getElementById("mainInputField").value
+    delete lists[listName]
+    AddToLocalStorage()
+    showDropdown()
+    generateListEntries()
+    document.getElementById("mainInputField").value = ""
+    document.getElementById("newEntry").value = ""
+    document.getElementById("listEditContent").innerHTML = ""
+    document.getElementById("dropdownOptions").style.display = "none"
+}
