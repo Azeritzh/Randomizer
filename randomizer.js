@@ -4,7 +4,7 @@ var localData
 var listName
 var listEntry
 
-window.onload = generateListEntries()
+$(window).on("load", generateListEntries)
 
 function AddNewEntry() {
     if(getFromLocalStorage() != undefined){
