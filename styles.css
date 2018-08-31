@@ -7,6 +7,7 @@ body {
 
 input {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background-color: antiquewhite;
 }
 
 .deleteImage {
@@ -45,16 +46,23 @@ input {
 
 h1 {
     display: block;
-    padding-bottom: 0.5rem;
-    padding-left: 7rem;
     font-size: 4rem;
-    background-color: #3c6148;
     color: white;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(88, 134, 103, 0.8);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
 }
 
 #logoImg {
-    position: absolute;
-    width: 6.5rem;
+    width: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    margin-bottom: -3rem;
 }
 
 #mainElement {
@@ -87,7 +95,7 @@ h1 {
     border: none;
     float: left;
     font-size: 1.5rem;
-    background-color: white;
+    background-color: antiquewhite;
     border-top-right-radius: 1rem;
 }
 
@@ -97,7 +105,7 @@ h1 {
 }
 
 #dropdownOptions {
-    background-color: white;
+    background-color: antiquewhite;
     width: 30rem;
     position: absolute;
     z-index: 1;
