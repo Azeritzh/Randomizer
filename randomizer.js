@@ -79,6 +79,7 @@ function generateListEntries(){
 
 function showListEntries(key) {
     let editList = document.getElementById("listEditContent")
+    editList.className = "listShown"
     lists = getFromLocalStorage()
     document.getElementById("listEditContent").innerHTML = ""
     for(let i=0; i<lists[key].length; i++){
@@ -95,11 +96,13 @@ function showListEntries(key) {
 
 function showDropdown() {
     let dropdownElement = document.getElementById("dropdownOptions")
-    if(dropdownElement.style.display == "none" || dropdownElement.style.display == ""){
-        dropdownElement.style.display = "block"
+    if(dropdownElement.className == "shown"){
+        dropdownElement.className = ""
+        document.getElementById("mainArrow").src = "images/ArrowUp_icon.svg"
     } 
     else {
-        dropdownElement.style.display = "none"
+        dropdownElement.className = "shown"
+        document.getElementById("mainArrow").src = "images/ArrowDown_icon.svg"
     }
 }
 
@@ -127,6 +130,7 @@ function deleteList() {
     generateListEntries()
     document.getElementById("mainInputField").value = ""
     document.getElementById("newEntry").value = ""
-    document.getElementById("listEditContent").innerHTML = ""
+    document.getElementById("listEditContent").className = ""
+    //document.getElementById("listEditContent").innerHTML = ""
     document.getElementById("dropdownOptions").style.display = "none"
 }
