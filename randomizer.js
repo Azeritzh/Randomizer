@@ -84,11 +84,14 @@ function showListEntries(key) {
     document.getElementById("listEditContent").innerHTML = ""
     for(let i=0; i<lists[key].length; i++){
         let div = document.createElement("div")
+        let editEntry = "editEntry" + i
         div.className = "editItemHolder"
         div.onclick = () => deleteEntryFromList(lists[key][i])
         div.innerHTML = 
-        "<img class='deleteImage' src='images/DeleteRound_icon.svg'/>" + 
-        "<div class='editItem' type='text'>" + lists[key][i] + "</div>"
+        "<div class='editItem' id='" + editEntry +
+        "' type='text' onmouseover='showDelete(\"" + lists[key][i] + "\",\"" + editEntry + "\")'" + 
+        "onmouseout='showDelete(\"" + lists[key][i] + "\",\"" + editEntry + "\")'>"
+        + lists[key][i] + "</div>"
         editList.appendChild(div)
     }
     showDropdown()
@@ -133,4 +136,16 @@ function deleteList() {
     document.getElementById("listEditContent").className = ""
     //document.getElementById("listEditContent").innerHTML = ""
     document.getElementById("dropdownOptions").style.display = "none"
+}
+
+function showDelete(element, entry) {
+    let entryElement = document.getElementById(entry)
+    if(entryElement.style.backgroundColor == "red"){
+        entryElement.style.backgroundColor = "white"
+        entryElement.innerHTML = element
+    }
+    else {
+        entryElement.style.backgroundColor = "red"
+        entryElement.innerHTML = "Delete"
+    }
 }
