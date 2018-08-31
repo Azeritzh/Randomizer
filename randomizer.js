@@ -23,7 +23,6 @@ function AddNewEntry() {
             lists[listName] = []
         }
     }
-    
     if(listName != ""){
         AddToLocalStorage()
         generateListEntries()
@@ -35,7 +34,6 @@ function AddNewEntry() {
         listEntry.placeholder = "No list selected to add to"
         listEntry.value = ""
     }
-    
 }
 
 function ChooseRandomFromList() {
