@@ -12,23 +12,20 @@ function AddNewEntry() {
     lists = getFromLocalStorage()
     listName = document.getElementById("mainInputField").value
     listEntry = document.getElementById("newEntry")
-    if(lists != undefined && listName != ""){
-        if(lists[listName] != undefined) {
-            lists[listName].push(listEntry.value)
-        }
-        else if(listEntry.value != "") {
+    if(lists != undefined && listName != "" && listEntry.value != ""){
+        if(listEntry.value != "") {
             lists[listName] = [listEntry.value]
         }
         else{
             lists[listName] = []
         }
     }
-    if(listName != ""){
+    if(listName != "" && listEntry.value != ""){
         AddToLocalStorage()
         generateListEntries()
         showListEntries(listName)
         document.getElementById("newEntry").value = ""
-        document.getElementById("dropdownOptions").style.display = "none"
+        document.getElementById("dropdownOptions").className = ""
     } 
     else if(listEntry.value != "") {
         listEntry.placeholder = "No list selected to add to"
@@ -128,7 +125,7 @@ function deleteEntryFromList(item) {
     lists[listName] = newItem
     AddToLocalStorage()
     showListEntries(listName)
-    document.getElementById("dropdownOptions").style.display = "none"
+    document.getElementById("dropdownOptions").className = ""
 }
 
 function deleteList() {
@@ -141,7 +138,7 @@ function deleteList() {
     document.getElementById("mainInputField").value = ""
     document.getElementById("newEntry").value = ""
     document.getElementById("listEditContent").className = ""
-    document.getElementById("dropdownOptions").style.display = "none"
+    document.getElementById("dropdownOptions").className = ""
 }
 
 function showDelete(element, entry) {

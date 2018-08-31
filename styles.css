@@ -2,11 +2,11 @@ body {
     background-color: #a9bbaf;
     background-image: url("images/background.png");
     margin: unset;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 input {
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 .deleteImage {
@@ -45,7 +45,7 @@ input {
 
 h1 {
     display: block;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     padding-left: 7rem;
     font-size: 4rem;
     background-color: #3c6148;
@@ -74,7 +74,7 @@ h1 {
     margin-top: 5rem;
     cursor: pointer;
     color: white;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 #mainSubmit:hover {
@@ -135,9 +135,10 @@ h1 {
 
 #listEditContent.listShown {
     transition: max-height 0.50s ease-in;
-    max-height: 32.1rem;
+    max-height: 32rem;
     overflow: auto;
     width: 29rem;
+    padding-bottom: 1rem;
 }
 
 #listEditContent::-webkit-scrollbar {
@@ -195,7 +196,7 @@ h1 {
     font-size: 2rem;
     cursor: pointer;
     color: white;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 #deleteListButton:hover {
@@ -213,7 +214,7 @@ h1 {
     font-size: 2rem;
     cursor: pointer;
     color: white;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 #generateBotton:hover {
