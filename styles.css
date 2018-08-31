@@ -1,7 +1,5 @@
 body {
-    /*background-color: #4a7b51;*/
-    background: linear-gradient(-42deg, #26734c,  #b56c50);
-    /*background-image: url("images/Background.png");*/
+    background: linear-gradient(-42deg, #3e7542,  #a55e2c);
     margin: unset;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
