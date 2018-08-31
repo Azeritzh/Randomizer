@@ -38,11 +38,13 @@ input {
     border-radius: 1rem;
     color: #28351f;
     cursor: pointer;
+    transition:  background-color 0.15s ease-out; 
 }
 
 .editItem:hover {
-    background-color: #8e3636;
-    color: white;    
+    background-color: #d21010;
+    color: white;
+    transition:  background-color 0.15s ease-in; 
 }
 
 #mainInputField {
@@ -83,7 +85,7 @@ h1 {
     width: 14rem;
     height: 3rem;
     font-size: 2rem;
-    background-color: #3e532c;
+    background-color: #d26110;
     border: none;
     border-radius: 1rem;
     position: absolute;
@@ -91,10 +93,12 @@ h1 {
     cursor: pointer;
     color: white;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    transition:  background-color 0.15s ease-out; 
 }
 
 #mainSubmit:hover {
-    background-color: #4da76a;
+    background-color: #34883b;
+    transition:  background-color 0.15s ease-in; 
 }
 
 #mainSelect {
@@ -169,12 +173,12 @@ h1 {
 }
 
 #listEditContent::-webkit-scrollbar-thumb {
-    background-color: #3e532c;
+    background-color: #d26110;
     border-radius: 0.5rem;
 }
 
 #listEditContent::-webkit-scrollbar-thumb:hover {
-    background-color: #4da76a;
+    background-color: #34883b;
 }
 
 #mainContainer {
@@ -209,7 +213,7 @@ h1 {
     width: 14rem;
     height: 3rem;
     border: none;
-    background-color: #3e532c;
+    background-color: #d26110;
     position: absolute;
     margin-left: 16rem;
     margin-top: 5rem;
@@ -218,15 +222,17 @@ h1 {
     cursor: pointer;
     color: white;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    transition:  background-color 0.15s ease-out; 
 }
 
 #deleteListButton:hover {
-    background-color: #4da76a;
+    background-color: #34883b;
+    transition:  background-color 0.15s ease-in; 
 }
 
 #generateBotton {
     position: absolute;
-    background-color: #3e532c;
+    background-color: #d26110;
     border: none;
     border-radius: 1rem;
     height: 3rem;
@@ -236,10 +242,12 @@ h1 {
     cursor: pointer;
     color: white;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    transition:  background-color 0.15s ease-out; 
 }
 
 #generateBotton:hover {
-    background-color: #4da76a;
+    background-color: #34883b;
+    transition:  background-color 0.15s ease-in; 
 }
 
 .generatedItem {
