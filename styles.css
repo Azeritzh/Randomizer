@@ -2,6 +2,11 @@ body {
     background-color: #a9bbaf;
     background-image: url("images/background.png");
     margin: unset;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+input {
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .deleteImage {
@@ -13,14 +18,19 @@ body {
 
 .editItem {
     margin-top: 1.5rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
     width: 23rem;
     height: 2rem;
     font-size: 2rem;
     background-color: white;
     margin-left: 4rem;
     text-align: center;
+    border-radius: 1rem;
+}
+
+.editItem:hover {
+    background-color: #ab3636;
+    color: white;    
 }
 
 #mainInputField {
@@ -30,11 +40,11 @@ body {
     float:left;
     border: none;
     padding-left: 1rem;
+    border-top-left-radius: 1rem;
 }
 
 h1 {
     display: block;
-    padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 7rem;
     font-size: 4rem;
@@ -57,12 +67,18 @@ h1 {
     width: 14rem;
     height: 3rem;
     font-size: 2rem;
-    background-color: #dac27e;
+    background-color: #72bb6d;
     border: none;
     border-radius: 1rem;
     position: absolute;
     margin-top: 5rem;
     cursor: pointer;
+    color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#mainSubmit:hover {
+    background-color: #9dd699;
 }
 
 #mainSelect {
@@ -72,6 +88,7 @@ h1 {
     float: left;
     font-size: 1.5rem;
     background-color: white;
+    border-top-right-radius: 1rem;
 }
 
 #mainArrow {
@@ -81,12 +98,10 @@ h1 {
 
 #dropdownOptions {
     background-color: white;
-    border-top: 1px solid darkgray;
     width: 30rem;
     position: absolute;
     z-index: 1;
     margin-top: 3rem;
-    border-bottom: 1px solid darkgray;
     max-height: 0;
     overflow: auto;
     transition: 0.25s ease-out;
@@ -95,11 +110,12 @@ h1 {
     transition: 0.25s ease-in;
     max-height: 15rem;
     overflow: auto;
+    border-top: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
 }
 
 .listOption {
     font-size: 2rem;
-    font-family: sans-serif;
     padding-left: 0.5rem;
     cursor: pointer;
 }
@@ -145,7 +161,7 @@ h1 {
     width: fit-content;
     background-color: rgba(88, 134, 103, 0.8);
     padding: 2rem;
-    padding-bottom: 3.5rem;
+    padding-bottom: 5rem;
     border-radius: 1rem;
     min-height: 20rem;
 }
@@ -157,6 +173,7 @@ h1 {
     border: none;
     font-size: 2rem;
     padding-left: 1rem;
+    border-radius: 1rem;
 }
 
 .InputHeader {
@@ -170,18 +187,24 @@ h1 {
     width: 14rem;
     height: 3rem;
     border: none;
-    background-color: #dac27e;
+    background-color: #72bb6d;
     position: absolute;
     margin-left: 16rem;
     margin-top: 5rem;
     border-radius: 1rem;
     font-size: 2rem;
     cursor: pointer;
+    color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#deleteListButton:hover {
+    background-color: #9dd699;
 }
 
 #generateBotton {
     position: absolute;
-    background-color: #dac27e;
+    background-color: #72bb6d;
     border: none;
     border-radius: 1rem;
     height: 3rem;
@@ -189,17 +212,23 @@ h1 {
     margin-top: 9rem;
     font-size: 2rem;
     cursor: pointer;
+    color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#generateBotton:hover {
+    background-color: #9dd699;
 }
 
 .generatedItem {
     background-color: white;
     text-align: center;
     margin-top: 1.5rem;
-    margin-left: 2rem;
-    padding-top: 0.4rem;
-    height: 2.6rem;
-    width: 28rem;
+    margin-left: 4rem;
+    padding-bottom: 1rem;
+    height: 2rem;
+    width: 23rem;
     font-size: 2rem;
-    font-family: sans-serif;
+    border-radius: 1rem;
 }
 

@@ -11,23 +11,31 @@ $(window).on("load", generateListEntries)
 function AddNewEntry() {
     lists = getFromLocalStorage()
     listName = document.getElementById("mainInputField").value
-    listEntry = document.getElementById("newEntry").value
-    if(lists != undefined){
+    listEntry = document.getElementById("newEntry")
+    if(lists != undefined && listName != ""){
         if(lists[listName] != undefined) {
-            lists[listName].push(listEntry)
+            lists[listName].push(listEntry.value)
         }
-        else if(listEntry != "") {
-            lists[listName] = [listEntry]
+        else if(listEntry.value != "") {
+            lists[listName] = [listEntry.value]
         }
         else{
             lists[listName] = []
         }
     }
-    AddToLocalStorage()
-    generateListEntries()
-    showListEntries(listName)
-    document.getElementById("newEntry").value = ""
-    document.getElementById("dropdownOptions").style.display = "none"
+    
+    if(listName != ""){
+        AddToLocalStorage()
+        generateListEntries()
+        showListEntries(listName)
+        document.getElementById("newEntry").value = ""
+        document.getElementById("dropdownOptions").style.display = "none"
+    } 
+    else if(listEntry.value != "") {
+        listEntry.placeholder = "No list selected to add to"
+        listEntry.value = ""
+    }
+    
 }
 
 function ChooseRandomFromList() {
@@ -35,7 +43,8 @@ function ChooseRandomFromList() {
     lists = getFromLocalStorage()
     if(listName == "") {
         document.getElementById("listEditContent").innerHTML = 
-        "<div class='generatedItem'>No list selected </div>"
+        "<div class='generatedItem'>No list selected</div>"
+        document.getElementById("listEditContent").className = "listShown"
     }
     else {
         let listLength = lists[listName].length
@@ -134,18 +143,15 @@ function deleteList() {
     document.getElementById("mainInputField").value = ""
     document.getElementById("newEntry").value = ""
     document.getElementById("listEditContent").className = ""
-    //document.getElementById("listEditContent").innerHTML = ""
     document.getElementById("dropdownOptions").style.display = "none"
 }
 
 function showDelete(element, entry) {
     let entryElement = document.getElementById(entry)
-    if(entryElement.style.backgroundColor == "red"){
-        entryElement.style.backgroundColor = "white"
-        entryElement.innerHTML = element
+    if(entryElement.innerHTML == element){
+        entryElement.innerHTML = "Delete"
     }
     else {
-        entryElement.style.backgroundColor = "red"
-        entryElement.innerHTML = "Delete"
+        entryElement.innerHTML = element
     }
 }
