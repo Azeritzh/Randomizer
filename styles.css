@@ -1,13 +1,22 @@
 body {
-    background-color: #a9bbaf;
-    background-image: url("images/Background.png");
+    /*background-color: #4a7b51;*/
+    background: linear-gradient(-42deg, #26734c,  #b56c50);
+    /*background-image: url("images/Background.png");*/
     margin: unset;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#backgroundCover {
+    Position: absolute;
+    background-color: blue;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
 }
 
 input {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     background-color: antiquewhite;
+    color: #28351f;
 }
 
 .deleteImage {
@@ -23,14 +32,16 @@ input {
     width: 23rem;
     height: 2rem;
     font-size: 2rem;
-    background-color: white;
+    background-color: antiquewhite;
     margin-left: 4rem;
     text-align: center;
     border-radius: 1rem;
+    color: #28351f;
+    cursor: pointer;
 }
 
 .editItem:hover {
-    background-color: #ab3636;
+    background-color: #8e3636;
     color: white;    
 }
 
@@ -45,16 +56,13 @@ input {
 }
 
 h1 {
-    display: block;
     font-size: 4rem;
     color: white;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(88, 134, 103, 0.8);
-    padding: 1rem;
-    border-radius: 1rem;
-    margin-top: 2rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
 }
 
 #logoImg {
@@ -75,7 +83,7 @@ h1 {
     width: 14rem;
     height: 3rem;
     font-size: 2rem;
-    background-color: #72bb6d;
+    background-color: #3e532c;
     border: none;
     border-radius: 1rem;
     position: absolute;
@@ -86,7 +94,7 @@ h1 {
 }
 
 #mainSubmit:hover {
-    background-color: #9dd699;
+    background-color: #4da76a;
 }
 
 #mainSelect {
@@ -126,6 +134,7 @@ h1 {
     font-size: 2rem;
     padding-left: 0.5rem;
     cursor: pointer;
+    color: #28351f;
 }
 
 .listOption:hover {
@@ -143,7 +152,7 @@ h1 {
 
 #listEditContent.listShown {
     transition: max-height 0.50s ease-in;
-    max-height: 32rem;
+    max-height: 23rem;
     overflow: auto;
     width: 29rem;
     padding-bottom: 1rem;
@@ -151,7 +160,7 @@ h1 {
 
 #listEditContent::-webkit-scrollbar {
     width: 2rem;
-    background-color: #b8d4c1;
+    background-color: antiquewhite;
     border-radius: 0.5rem;
 }
 
@@ -160,19 +169,23 @@ h1 {
 }
 
 #listEditContent::-webkit-scrollbar-thumb {
-    background-color: #44614e;
+    background-color: #3e532c;
     border-radius: 0.5rem;
+}
+
+#listEditContent::-webkit-scrollbar-thumb:hover {
+    background-color: #4da76a;
 }
 
 #mainContainer {
     margin-left: auto;
     margin-right: auto;
     width: fit-content;
-    background-color: rgba(88, 134, 103, 0.8);
+    background-color: rgba(147, 195, 141, 0.8);
     padding: 2rem;
-    padding-bottom: 5rem;
     border-radius: 1rem;
-    min-height: 20rem;
+    min-height: 28rem;
+    box-shadow: 13px 13px #3e532c;
 }
 
 #newEntry {
@@ -187,16 +200,16 @@ h1 {
 
 .InputHeader {
     font-size: 2rem;
-    color: white;
-    text-shadow: 0 1px black;
+    color: #28351f;
     padding-bottom: 0.5rem;
+    font-weight: bolder;
 }
 
 #deleteListButton {
     width: 14rem;
     height: 3rem;
     border: none;
-    background-color: #72bb6d;
+    background-color: #3e532c;
     position: absolute;
     margin-left: 16rem;
     margin-top: 5rem;
@@ -208,12 +221,12 @@ h1 {
 }
 
 #deleteListButton:hover {
-    background-color: #9dd699;
+    background-color: #4da76a;
 }
 
 #generateBotton {
     position: absolute;
-    background-color: #72bb6d;
+    background-color: #3e532c;
     border: none;
     border-radius: 1rem;
     height: 3rem;
@@ -226,11 +239,11 @@ h1 {
 }
 
 #generateBotton:hover {
-    background-color: #9dd699;
+    background-color: #4da76a;
 }
 
 .generatedItem {
-    background-color: white;
+    background-color: antiquewhite;
     text-align: center;
     margin-top: 1.5rem;
     margin-left: 4rem;
