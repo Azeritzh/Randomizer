@@ -4,13 +4,6 @@ body {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-#backgroundCover {
-    Position: absolute;
-    background-color: blue;
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
-}
-
 input {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     background-color: antiquewhite;
