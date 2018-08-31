@@ -4,9 +4,7 @@ var localData
 var listName
 var listEntry
 
-
-
-$(window).on("load", generateListEntries)
+window.onload = generateListEntries
 
 function AddNewEntry() {
     lists = getFromLocalStorage()
