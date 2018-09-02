@@ -131,7 +131,6 @@ function deleteList() {
     let listName = document.getElementById("mainInputField").value
     delete lists[listName]
     AddToLocalStorage()
-    showDropdown()
     generateListEntries()
     document.getElementById("mainInputField").value = ""
     document.getElementById("newEntry").value = ""
