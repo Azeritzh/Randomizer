@@ -11,11 +11,11 @@ function AddNewEntry() {
     listName = document.getElementById("mainInputField").value
     listEntry = document.getElementById("newEntry")
     if(lists != undefined && listName != "" && listEntry.value != ""){
-        if(listEntry.value != "") {
-            lists[listName] = [listEntry.value]
+        if(lists[listName] != undefined) {
+            lists[listName].push(listEntry.value)
         }
         else{
-            lists[listName] = []
+            lists[listName] = [listEntry.value]
         }
     }
     if(listName != "" && listEntry.value != ""){
