@@ -142,13 +142,14 @@ h1 {
     max-width: 0rem;
     padding-right: 1rem;
     overflow: auto;
-    /*transition: max-height 0.50s ease-out;*/
-    transition: max-width 0.50s ease-out;
+    transition: max-height 0.50s ease-out;
+    /*transition: max-width 0.50s ease-out;*/
 }
 
 #listEditContent.listShown {
-    /*transition: max-height 0.50s ease-in;*/
-    transition: max-width 0.50s ease-in;
+    transition-delay: 0.50s;
+    transition-delay: max-height 0.50s ease-in;
+    /*transition: max-width 0.50s ease-in;*/
     max-height: 23rem;
     max-width: 30rem;
     overflow: auto;
