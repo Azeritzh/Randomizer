@@ -178,12 +178,20 @@ h1 {
 #mainContainer {
     margin-left: auto;
     margin-right: auto;
-    width: fit-content;
+    /*width: fit-content;*/
+    max-width:30rem;
     background-color: rgba(147, 195, 141, 0.8);
     padding: 2rem;
     border-radius: 1rem;
     min-height: 30.1rem;
     box-shadow: 13px 13px #3e532c;
+    transition: max-width 0.50s ease-out;
+    
+}
+
+#mainContainer.listShown {
+    max-width: 60rem;
+    transition: max-width 0.50s ease-in;
 }
 
 #newEntry {

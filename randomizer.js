@@ -41,8 +41,7 @@ function ChooseRandomFromList() {
         listBox.className = "listShown"
     }
     else {
-        let numberToGenerate = document.getElementById("generateCount").value
-        numberToGenerate = parseInt(numberToGenerate)
+        let numberToGenerate = parseInt(document.getElementById("generateCount").value)
         let listLength = lists[listName].length
         let generated = listBox.innerHTML = ""
         for(var i=0; i<numberToGenerate; i++){
@@ -89,6 +88,7 @@ function generateListEntries(){
 
 function showListEntries(key) {
     let editList = document.getElementById("listEditContent")
+    document.getElementById("mainContainer").className = "listShown"
     editList.className = "listShown"
     lists = getFromLocalStorage()
     document.getElementById("listEditContent").innerHTML = ""
@@ -144,6 +144,7 @@ function deleteList() {
     document.getElementById("newEntry").value = ""
     document.getElementById("listEditContent").className = ""
     document.getElementById("dropdownOptions").className = ""
+    document.getElementById("mainContainer").className = ""
 }
 
 function showDelete(element, entry) {
