@@ -33,17 +33,25 @@ function AddNewEntry() {
 
 function ChooseRandomFromList() {
     let listName = document.getElementById("mainInputField").value
+    let listBox = document.getElementById("listEditContent")
     lists = getFromLocalStorage()
     if(listName == "") {
-        document.getElementById("listEditContent").innerHTML = 
+        listBox.innerHTML = 
         "<div class='generatedItem'>No list selected</div>"
-        document.getElementById("listEditContent").className = "listShown"
+        listBox.className = "listShown"
     }
     else {
+        let numberToGenerate = document.getElementById("generateCount").value
+        numberToGenerate = parseInt(numberToGenerate)
         let listLength = lists[listName].length
-        let random = Math.floor(Math.random() * listLength)
-        document.getElementById("listEditContent").innerHTML = 
-        "<div class='generatedItem'>" + lists[listName][random] + "</div>"
+        let generated = listBox.innerHTML = ""
+        for(var i=0; i<numberToGenerate; i++){
+            let random = Math.floor(Math.random() * listLength)
+            let div = document.createElement("div")
+            div.className = "generatedItem"
+            div.innerHTML = "<div>" + lists[listName][random] + "</div>"
+            listBox.appendChild(div)          
+        }        
     }
 }
 

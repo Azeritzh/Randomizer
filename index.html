@@ -17,7 +17,10 @@
         <input type="text" id="newEntry" placeholder="New entry name">
         <button id="mainSubmit" onclick="AddNewEntry()">Submit new</button>
         <button id="deleteListButton" onclick="deleteList()">Delete list</button>
-        <button id="generateBotton" onclick="ChooseRandomFromList()">Generate random from list</button>
+        <div>
+            <button id="generateBotton" onclick="ChooseRandomFromList()">Generate random from list</button>
+            <input type="number" id="generateCount" value="1">
+        </div>
     </div>   
     <div id="listEditContent"></div>
 </div>

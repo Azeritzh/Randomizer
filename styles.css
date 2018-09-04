@@ -22,7 +22,7 @@ input {
     padding-bottom: 1rem;
     width: 23rem;
     height: 2rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     background-color: antiquewhite;
     margin-left: 4rem;
     text-align: center;
@@ -41,7 +41,7 @@ input {
 #mainInputField {
     width: 26.5rem;
     height: 3rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     float:left;
     border: none;
     padding-left: 1rem;
@@ -75,7 +75,7 @@ h1 {
 #mainSubmit {
     width: 14rem;
     height: 3rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     background-color: #d26110;
     border: none;
     border-radius: 1rem;
@@ -126,7 +126,7 @@ h1 {
 }
 
 .listOption {
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding-left: 0.5rem;
     cursor: pointer;
     color: #28351f;
@@ -191,7 +191,7 @@ h1 {
     width: 30rem;
     height: 3rem;
     border: none;
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding-left: 1rem;
     border-radius: 1rem;
 }
@@ -212,7 +212,7 @@ h1 {
     margin-left: 16rem;
     margin-top: 5rem;
     border-radius: 1rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     cursor: pointer;
     color: white;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -230,9 +230,9 @@ h1 {
     border: none;
     border-radius: 1rem;
     height: 3rem;
-    width: 30rem;
+    width: 25rem;
     margin-top: 9rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     cursor: pointer;
     color: white;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -252,7 +252,20 @@ h1 {
     padding-bottom: 1rem;
     height: 2rem;
     width: 23rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     border-radius: 1rem;
+}
+
+#generateCount {
+    width: 4rem;
+    position: relative;
+    height: 3rem;
+    float: right;
+    margin-top: 9rem;
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    padding-left: 0.5rem;
 }
 
