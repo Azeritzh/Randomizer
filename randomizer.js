@@ -89,21 +89,36 @@ function generateListEntries(){
 function showListEntries(key) {
     let editList = document.getElementById("listEditContent")
     document.getElementById("mainContainer").className = "listShown"
-    editList.className = "listShown"
-    lists = getFromLocalStorage()
-    document.getElementById("listEditContent").innerHTML = ""
-    for(let i=0; i<lists[key].length; i++){
-        let div = document.createElement("div")
-        let editEntry = "editEntry" + i
-        div.className = "editItemHolder"
-        div.onclick = () => deleteEntryFromList(lists[key][i])
-        div.innerHTML = 
-        "<div class='editItem' id='" + editEntry +
-        "' type='text' onmouseover='showDelete(\"" + lists[key][i] + "\",\"" + editEntry + "\")'" + 
-        "onmouseout='showDelete(\"" + lists[key][i] + "\",\"" + editEntry + "\")'>"
-        + lists[key][i] + "</div>"
-        editList.appendChild(div)
+    if(editList.className == "listShown"){
+        editList.className = ""
+        setTimeout(function() {
+            editList.className = "listShown"
+        }, 500)
     }
+    else {
+        setTimeout(function() {
+            editList.className = "listShown"
+        }, 500)
+    }
+    lists = getFromLocalStorage()
+    
+    //editList.className = ""
+    setTimeout(function() {
+        editList.innerHTML = ""
+        for(let i=0; i<lists[key].length; i++){
+            let div = document.createElement("div")
+            let editEntry = "editEntry" + i
+            div.className = "editItemHolder"
+            div.onclick = () => deleteEntryFromList(lists[key][i])
+            div.innerHTML = 
+            "<div class='editItem' id='" + editEntry +
+            "' type='text' onmouseover='showDelete(\"" + lists[key][i] + "\",\"" + editEntry + "\")'" + 
+            "onmouseout='showDelete(\"" + lists[key][i] + "\",\"" + editEntry + "\")'>"
+            + lists[key][i] + "</div>"
+            editList.appendChild(div)
+        }
+    }, 500)
+    
     showDropdown()
 }
 
