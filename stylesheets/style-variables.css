@@ -1,0 +1,21 @@
+body {
+    /*Color variables*/
+    --color-background1: #3e7542;
+    --color-background2: #a55e2c;
+
+    --color-input: antiquewhite;
+    --color-input-text: #28351f;
+    
+    --color-button: #d26110;
+    --color-button-active: #4da76a;
+
+    --color-delete: #d21010;
+    --color-text: white;
+    --color-border: darkgray;
+    --color-shadow: #3e532c;
+
+    --font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    --font-size-text: 1.8rem;
+
+    --border-radius: 1rem;
+}

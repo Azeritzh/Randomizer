@@ -1,27 +1,27 @@
-<script src="randomizer.js"></script>
-<link href="styles.css" rel="stylesheet">
+<script src="javascript/randomizer.js"></script>
+<link href="stylesheets/styles.css" rel="stylesheet">
 
-<img id="logoImg" src="images/ProductionRound_icon.svg">
+<img class="logoImg" src="images/ProductionRound_icon.svg">
 
-<div id="mainContainer">
+<div class="mainContainer" id="mainContainer">
     <h1>Randomizer</h1>
 
-    <div id="mainElement">
+    <div class="optionsElement" id="mainElement">
         <div class="InputHeader">Choose list or write new:</div>
-        <input type="text" id="mainInputField" placeholder="New list name">
-        <div id="mainSelect" onclick="showDropdown()">
-            <img id="mainArrow" src="images/ArrowDown_icon.svg">
+        <input type="text" class="inputListnameField" id="mainInputField" placeholder="New list name">
+        <div class="listSelect" onclick="showDropdown()">
+            <img class="listSelectImg" id="ArrowImg" src="images/ArrowDown_icon.svg">
         </div>
-        <div id="dropdownOptions"></div>
+        <div class="dropdownList" id="dropdownOptions"></div>
         <div class="InputHeader" style="margin-top: 3.5rem;">Add entry to list:</div>
-        <input type="text" id="newEntry" placeholder="New entry name">
-        <button id="mainSubmit" onclick="AddNewEntry()">Submit new</button>
-        <button id="deleteListButton" onclick="deleteList()">Delete list</button>
+        <input type="text" class="listEntry" id="newEntry" placeholder="New entry name">
+        <button class="submitButton" onclick="AddNewEntry()">Submit new</button>
+        <button class="deleteListButton" onclick="deleteList()">Delete list</button>
         <div>
-            <button id="generateBotton" onclick="ChooseRandomFromList()">Generate random from list</button>
+            <button class="generateBotton" onclick="ChooseRandomFromList()">Generate random from list</button>
             <input type="number" id="generateCount" value="1">
         </div>
     </div>   
-    <div id="listEditContent"></div>
+    <div class="listElement" id="listEditContent"></div>
 </div>
 
